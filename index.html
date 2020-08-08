@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <h1>JSON</h1>
+    <h1>javaScript OBJECT Notation</h1>
+
+<ul id="user-container">
+
+</ul>
+
+<script>
+    // video No 04--------------
+    const user = {id:122,name:'rakib'}
+    const userJson = JSON.stringify(user);
+    console.log(userJson);
+    const userFrom = JSON.parse(userJson);
+    console.log(userFrom);
+
+    // video No 05------------------------
+   fetch(' http://jsonplaceholder.typicode.com/users')
+   .then (Response => Response .json())
+   .then(jason => console.log(jason))
+
+// --------------
+fetch(' http://jsonplaceholder.typicode.com/users')
+   .then (Response => Response .json())
+   .then(jason => displayUser(jason))
+
+   function displayUser(user){
+       const userNam = user.map(user =>user.username)
+       console.log(userNam,"user");
+
+   }
+// -------------------------
+
+fetch(' http://jsonplaceholder.typicode.com/users')
+   .then (Response => Response .json())
+   .then(jason => displayUser(jason))
+
+   function displayUser(user){
+       const userNam = user.map(user =>user.username)
+    //    console.log(userNam,"user");
+   for (let i = 0; i <userNam.length; i++) {
+       const element =userNam[i];
+       const li = document.createElement
+   }
+   }
+
+</script>
+
+</body>
+</html>
